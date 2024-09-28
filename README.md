@@ -2,6 +2,8 @@
 
 This is an extension of the excellent [pico-lib2 library](https://github.com/iiot2k/pico-lib2).  This library is meant to be a submodule under another project, not installed as a separate library and pulled in dynamically.
 
+THIS IS A WORK IN PROGRESS.  Unless you want to play along, you really should go use the excellent pico2 library.
+
 ## Why?
 
 I love the structure and functionality of Lib2 but it's been 3 years since it was actively developed.  I also wanted to make the Pico W board the default, and extend the library as a common core for my own projects.
