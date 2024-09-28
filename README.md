@@ -1,57 +1,21 @@
-# **Lib2** - C/C++ Library for Raspberry Pi Pico
-[![platform](https://img.shields.io/badge/Raspberry--Pico-Pico)](https://www.raspberrypi.org/products/raspberry-pi-pico/)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZDRCZBQFWV3A6)
+# **Lib3** - C/C++ Library for Raspberry Pi Pico
+
+This is an extension of the excellent [pico-lib2 library](https://github.com/iiot2k/pico-lib2).  This library is meant to be a submodule under another project, not installed as a separate library and pulled in dynamically.
+
+## Why?
+
+I love the structure and functionality of Lib2 but it's been 3 years since it was actively developed.  I also wanted to make the Pico W board the default, and extend the library as a common core for my own projects.
 
 ## Description:
-Lib2 library implements wrapper functions and device driver for Raspberry Pi Pico.<br>
-With lib2 it is more easy to write C/C++applications for Pico.<br>
+Lib3 library implements wrapper functions and device driver for Raspberry Pi Pico.<br>
+With lib3 it is more easy to write C/C++applications for Pico.<br>
 
 See [Getting Started with the Raspberry Pi Pico](https://rptl.io/pico-get-started)
 for information on getting up and running.
 
-## Using:
-⚠️Set environment variables ***PICO_SDK_PATH*** and ***PICO_LIB2_PATH***.<br>
-Add the file ***pico_lib2_import.cmake*** in folder ***external***<br>
-to your application ***CMakeLists.txt***.<br>
+## Example and Template 
 
-Example ***CMakeLists.txt*** file entry:
-```cmake
-cmake_minimum_required(VERSION 3.12)
-
-# Pull in PICO SDK (must be before project)
-include(pico_sdk_import.cmake)
-
-# We also need LIB2
-include(pico_lib2_import.cmake)
-
-# Your project
-project(myproj C CXX)
-
-# Used compiler 
-set(CMAKE_C_STANDARD 11)
-set(CMAKE_CXX_STANDARD 17)
-
-#Your sourfiles
-add_executable(myproj main.c)
-
-# Add used libraries
-target_link_libraries(myproj
-    lib2_sys
-    dev_ads1x15
-)
-
-# Setup stdio 
-pico_enable_stdio_usb(myproj 0)
-pico_enable_stdio_uart(myproj 1)
-
-# Create map/bin/hex file etc.
-pico_add_extra_outputs(myproj)
-
-```
-## Examples:
-https://github.com/iiot2k/pico-lib2-examples are examples for using Lib2.
-
-[CHANGELOG](CHANGELOG.md)<br>
+A basic example is available to use lib3 [here](https://github.com/gherlein/pico-template).
 
 ## Functions and Device Driver:
 
